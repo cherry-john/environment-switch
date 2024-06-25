@@ -1,0 +1,24 @@
+#environment-switch-page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+p {
+  margin: 0;
+}

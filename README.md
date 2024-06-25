@@ -1,6 +1,6 @@
 # Environment Switcher Web Extension
 
-This Web extension allows you to easily switch between environments within a project.
+This Web extension allows you to easily identify and switch between environments within a project.
 
 It uses [wxt](https://wxt.dev) as a web extension framework.
 

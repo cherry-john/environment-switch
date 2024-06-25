@@ -1,9 +1,11 @@
 interface Environment {
-  name: string
-  url: string
+  id: string;
+  name: string;
+  url: string;
 }
 
-interface Project{
-  name: string
-  environments: Environment[]
+interface Project {
+  id: string;
+  name: string;
+  environments: Environment[];
 }

@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import EnvironmentEntry from "./EnvironmentEntry";
+import AddIcon from "@/assets/AddIcon";
+import DeleteIcon from "@/assets/DeleteIcon";
 
 interface ProjectEntryProps {
   project: Project;
   updateProject: (project: Project) => void;
-  deleteProject: (projectId: string) => void;
 }
 
 export default function ProjectEntry({
   project,
   updateProject,
-  deleteProject,
 }: ProjectEntryProps) {
   const [localProject, setLocalProject] = useState<Project>(project);
 
@@ -54,11 +54,11 @@ export default function ProjectEntry({
   }, [localProject]);
 
   return (
-    <div className="m-2 border-2 border-zinc-200 rounded">
-      <div className="flex flex-wrap gap-2 p-4 bg-zinc-200">
+    <div>
+      <div className="flex gap-2 p-2 w-full">
         <input
           type="text"
-          className="w-full max-w-md rounded-md border-0 py-1 pr-2 pl-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-indigo-600"
+          className="w-full col-span-3 rounded-md border-0 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-indigo-600"
           placeholder="Project Name"
           aria-describedby="project-name-label"
           value={localProject.name}
@@ -69,23 +69,15 @@ export default function ProjectEntry({
             }));
           }}
         />
-
-        <div className="flex flex-wrap gap-2 ml-auto">
-          <button
-            className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        <button
+          className="font-bold p-2 rounded-md border"
+          aria-label="Add Environment"
             onClick={() => addEnvironment()}
           >
-            + Add Environment
-          </button>
-          <button
-            className="bg-red-800 hover:bg-red-900 text-white font-bold py-2 px-4 rounded"
-            onClick={() => deleteProject(project.id)}
-          >
-            Delete
-          </button>
-        </div>
+          <AddIcon />
+        </button>
       </div>
-      <div className="mt-2 p-2">
+      <div>
         <div className="w-full grid grid-cols-7 justify-around text-lg">
           <p className="col-span-3 text-center">Name</p>
           <p className="col-span-3 text-center">URL</p>

@@ -59,7 +59,7 @@ export default function Settings() {
       </div>
       <div className="h-full min-h-80 w-full p-2 border-l-2">
         {selectedProject ? (
-          <ProjectEntry project={selectedProject} updateProject={handleUpdateProject} />
+          <ProjectEntry project={selectedProject} key={selectedProject.id} updateProject={handleUpdateProject} />
         ) : (<p>Edit an environment by selecting it</p>)}
       </div>
     </div >

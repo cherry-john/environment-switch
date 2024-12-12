@@ -70,7 +70,7 @@ export default function ProjectEntry({
           }}
         />
         <button
-          className="font-bold p-2 rounded-md border"
+          className="font-bold p-2 rounded hover:bg-slate-100"
           aria-label="Add Environment"
             onClick={() => addEnvironment()}
           >

@@ -37,7 +37,7 @@ export default function EnvironmentEntry({
       />
       <div className="w-full">
         <button
-          className="my-auto text-red-800 text-center py-2 px-2 rounded-md border border-red-800"
+          className="my-auto text-red-800 text-center py-2 px-2 rounded hover:bg-red-100"
           onClick={() => deleteEnvironment(environment.id)}
         >
           <DeleteIcon />

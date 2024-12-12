@@ -14,7 +14,7 @@ export default function TitleBar({ settingsPage, setSettingsPage }: TitleBarProp
     <div className="w-full h-full flex flex-row gap-2 border-b-2 px-4">
       <h1 className="my-auto">Environment Switch</h1>
       <button
-        className="ml-auto fill-black font-bold rounded"
+        className="ml-auto p-2 fill-black font-bold rounded hover:bg-slate-100"
         aria-label={settingsPage ? "Back to selector" : "Settings"}
         onClick={() => setSettingsPage(!settingsPage)}
       >

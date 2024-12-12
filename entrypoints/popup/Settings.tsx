@@ -46,13 +46,13 @@ export default function Settings() {
       <div className="h-full min-w-48">
         <div className="flex flex-row gap-2 mb-2 min-h-12 items-center border-b-2 p-2">
           <h2>Projects</h2>
-          <button className="ml-auto" onClick={() => createNewProject()}><AddIcon /></button>
+          <button className="ml-auto hover:bg-slate-100 p-2 rounded" onClick={() => createNewProject()}><AddIcon /></button>
         </div>
         <div className="flex flex-col gap-4 p-2">
           {projects.map(project => (
-            <div className="w-full flex flex-row gap-2" key={project.id}>
-              <button onClick={() => setSelectedProject(projects.find((searchProject) => project.id == searchProject.id))}>{project.name}</button>
-              <button onClick={() => deleteProject(project.id)} className="ml-auto"><DeleteIcon /></button>
+            <div className="w-full flex flex-row gap-2" key={project.id} >
+              <button className="hover:bg-slate-100 p-2 flex-grow rounded" onClick={() => setSelectedProject(projects.find((searchProject) => project.id == searchProject.id))}>{project.name}</button>
+              <button className="ml-auto hover:bg-slate-100 px-2 rounded" onClick={() => deleteProject(project.id)} ><DeleteIcon /></button>
             </div>
           ))}
         </div>
